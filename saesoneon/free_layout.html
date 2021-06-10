@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>se_so_neon</title>
+        <meta charset="utf-8" />
+
+        <style>
+            body{
+                background-image: url("sesoneon_img/paper4.jpg");
+            }
+            .wrap{
+                min-width: 700px;
+                max-width: 1600px;
+                margin: 0px auto;
+            }
+            header h1{
+                font-weight: bolder;
+                color:#A9BCF5;
+            }
+            header ul{
+                padding:0px;
+                margin:0px;
+            }
+            header ul li{
+                float:left;
+                list-style: none;
+                padding: 5px 10px 7px 0px; /*상우하좌 위에서부터 시계방향*/
+                font-size: 10px;
+            }
+            .short_line{
+                border-top: solid 1px gray;
+                width: 50px;
+            }
+            a{
+                color:black;
+            }
+            a:link{
+                color: black;
+            }
+            a:visited{
+                color: black;
+            }
+            a:hover{
+                color:#A9BCF5;
+            }
+            a:active{
+                color: black;
+            }
+            a:focus{
+                color:#A9BCF5;
+            }
+           
+            #main_visual{
+                background-image:url("sesoneon_img/main4.jpg");
+                background-color: black;
+                background-repeat: no-repeat;
+                background-size: 100px auto; /*고정값*/
+                background-size: 50% auto; /*가변값*/
+                background-size: cover;
+                background-position: 0px 0px; /*최상단 고정*/
+                background-position: 50% 50%; /*좌우 중앙, 상하 중앙*/
+                /* auto, contain, cover */
+
+                color: white;
+                text-align: center;
+                padding: 250px;
+            }
+            #main_visual h2{
+                font-size: 50px;
+                letter-spacing: 5px;
+                margin: 0px auto;
+                width: 800px;
+                padding: 0px auto;
+
+            }
+            #main_visual p{
+                color: white;
+                font-size: 15px;
+                margin: 0px;
+            }
+            #main_visual img{
+                margin-top: 100px;
+            }
+            section {
+                text-align:center;
+                font-size: 15px;
+            }
+            section h3{
+                color:#A9BCF5;
+                font-size: 30px;
+                padding:0px;
+                margin: 0px auto;
+            }
+            
+            .content>section{
+                padding: 50px;
+            }
+            .content>section>div{
+                width: 1000px;
+                margin: 0px auto;
+            }
+            .content>section>div>h3{
+                color: #A9BCF5;
+                font-size: 30px;
+            }
+            .content_part{
+                float: left;
+                width: 480px;
+                margin: 0px 10px;
+            }
+            .content_part dl{
+                margin: 0px;
+                
+            }
+            .content_part dd{
+                margin:0px;
+                text-align: left;
+            }
+            .content_part dt{
+                font-weight: bold;
+                font-size: 20px;
+                margin: 10px 0px;
+                text-align: left;
+            }
+            section {
+                text-align: center;
+            }
+            section h3{
+                color:#A9BCF5; 
+                font-size: 30px;
+            }
+            #about_ul{
+                padding: 0px 100px 0px 320px ;
+                text-align: center;
+            }
+            #about_ul li{
+                list-style: none;
+                float: left;
+                width:calc( 25% - 1px - 15px - 15px ); 
+                /* 1/4=25% */
+                border-right: solid 1px gray;
+                padding: 15px;
+                text-align: center;
+            }
+            #about_ul li dd{
+                margin: 0px auto;
+            }
+            #block_img_ul li:last-child{
+                border: none;
+            }
+            #block_img_ul dt{
+                font-weight: bold;
+                margin: 20px 0px;
+            }
+            #block_img_ul dd{
+                margin: 0px;
+            }
+            #block_img_ul{
+                padding: 0px;
+            }
+            #block_img_ul li{
+                float: left;
+                list-style:none;
+                width: 25%;
+            }
+            #block_img_ul li img{
+                width: 100%;
+                display: block;
+            }
+            #video_ul{
+                padding: 0px;
+            }
+            #video_ul li{
+                list-style: none;
+            }
+            .card{
+                width: 310px;
+                background-color: white;
+                border-right: solid #F7F2E0 3px;
+                border-bottom: solid #F7F2E0 3px;
+                border-left: solid #F7F2E0 3px;
+                margin: 20px;
+                float: left;
+            }
+            .card_top{
+                position: relative;
+            }
+            .card_top div{
+                background-color: #A9BCF5;
+                color: white;
+                display: inline-block;
+                padding: 3px 5px 3px 5px;
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+            }
+            .card_top img{
+                display: block;
+                width: 310px;
+            }
+            .card_in{
+                margin: 15px 15px 15px 15px;
+            }
+            .card_bottom{
+                padding: 25px;
+            }
+            h2{
+                font-size: 16px;
+            }
+            
+            #others{
+                list-style: none;
+            }
+            .form{
+                text-align: center;
+                margin: 0px auto;
+            }
+            footer{
+                color: black;
+                margin-left: 15px;
+            }
+            footer ul{
+                padding: 0px;
+                color:#A9BCF5;
+            }
+            footer ul li{
+                list-style: none;
+                float: left;
+                margin-right: 10px;
+                color:#A9BCF5;
+            }
+            .clearfix::after{
+                content:"";
+                clear: both;
+                display: table;
+            }
+        </style>
+
+
+
+
+    </head>
+    <body>
+    <div class="warp">
+         <header>
+            <h1 class="float_left">SE SO NEON</h1>
+            <nav class="float_right">
+                <ul class="clearfix">
+                    <div class="short_line"></div>
+                    <li><a href="index.html">INDEX</a></li>
+                    <li><a href="#seso/neon">SESO/NEON</a></li>
+                    <li><a href="#album">ALBUM</a></li>
+                    <li><a href="#video">VIDEO</a></li>
+                    <li><a href="#audio">AUDIO</a></li>
+                    <li><a href="#awards">AWARDS</a></li>
+                    <li><a href="#interview">INTERVIEW</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+    
+        <div id="main_visual">
+           <img src=""/>
+        </div>
+
+        <span></span>
+        <section>
+            <h3 id="seso/neon"><br />SESO/NEON</h3>
+            <p>
+                새소년은 황소윤이 80년대 인기 소년지 였던 새소년에 감명받아 새소년 이라는 이름을 지음. 
+                새롭다는 뜻의 새, 날아가는 새의 중의적인 의미를 가지고 있음
+                
+
+            </p>
+            <ul id="about_ul" class="clearfix">
+                <li>
+                    <img src="sesoneon_img/soyoon.png" />
+                    <dl>
+                        <dt>
+                            <br/>
+                            So!YoON
+                        </dt>
+                        <dd>
+                            새소년의 보컬,기타 담당
+                            1997.05.23 출생
+                        </dd>
+                    </dl> 
+                </li>
+                <li>
+                    <img src="sesoneon_img/hyunjin.png" />
+                    <dl>
+                        <dt>
+                            Park Hyunjin
+                        </dt>
+                        <dd>
+                            새소년의 베이시스트 담당
+                            1996.09.06 출생
+                        </dd>
+                    </dl> 
+                </li>
+                <li>
+                    <img src="sesoneon_img/yusu.png" />
+                    <dl>
+                        <dt>
+                            Yu Soo
+                        </dt>
+                        <dd>
+                            새소년의 드러머 담당<br/>
+                            1990.01.05 출생
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3 id="album"><br />ALBUM</h3>
+            <p>
+               2017년 긴 꿈으로 데뷔해 2020년 5월 난춘이 가장 최근 곡임.
+            </p>
+            <ul id="block_img_ul" class="clearfix">
+                <li><img src="sesoneon_img/긴꿈.jpg"/></li>
+                <li><img src="sesoneon_img/여름깃.jpg"/></li>
+                <li><img src="sesoneon_img/파도.jpg"/></li>
+                <li><img src="sesoneon_img/비적응.jpg"/></li>
+                <li><img src="sesoneon_img/난춘.jpg"/></li>
+                <li><img src="sesoneon_img/비적응.jpg"/></li>
+                <li><img src="sesoneon_img/긴꿈.jpg"/></li>
+                <li><img src="sesoneon_img/여름깃.jpg"/></li>
+            </ul>
+        </section>
+        
+        <section>
+            
+            <h3 id="video"><br />VIDEO</h3>
+            <p>새소년의 뮤직비디오</p>
+            
+            <ul id="video_ul" class="clearfix">
+                <li><video controls autoplay muted> <!--엣지에서는 되고 크롬에서는 안될 수도 있음-->
+                    <source src="sesoneon_img/난춘2.webm" type="video/mp4" />
+                </video></li>
+            </ul>
+            <p>
+                난춘(亂春)
+            </p>
+            
+            <ul id="video_ul" class="clearfix">
+                <li><video controls autoplay muted> <!--엣지에서는 되고 크롬에서는 안될 수도 있음-->
+                    <source src="sesoneon_img/파도2.webm" type="video/mp4" />
+                </video></li>
+                <p>파도</p>
+            </ul>
+            <p><a href="https://www.youtube.com/channel/UCpltpdgUIrAlf5oPmHslyLQ" target="_blank">더보기</a></p>
+
+        <section>
+            <h3 id="audio">AUDIO</h3>
+            <P>
+                새소년의 다양한 음악들
+            </P>
+            <ul>
+                <img src="sesoneon_img/난춘.jpg"/>
+                <li><audio controls autoplay muted>
+                    <source src="sesoneon_img/새소년_난춘 (亂春).mp3" type="audio/mpeg" />
+                </audio>
+                </li>
+                <img src="sesoneon_img/파도.jpg"/>
+                <li><audio controls autoplay muted>
+                    <source src="sesoneon_img/새소년 - 파도.mp3" type="audio/mpeg" />
+                </audio>
+                </li>
+
+                <p><a href="https://www.melon.com/search/total/index.htm?q=%EC%83%88%EC%86%8C%EB%85%84&section=&linkOrText=T&ipath=srch_form" target="_blank">
+                    더보기</a></p>
+            </ul>
+        </section>
+
+
+            <h3 id="awards"><br />AWARDS</h3>
+            <p>
+               새소년의 수상경력
+            </p>
+        </section>
+
+        
+            
+        <div class="clearfix">
+            <div class="card">
+                
+                <div class="card_top">
+                    <img src="sesoneon_img/pentarookies.jpg"/>
+                    <div>2016 펜타포트 음악축제</div>
+                </div>
+                <div class="card_in">
+                    <h2>2016 펜타루키즈 신인상 수상</h2>
+                    <p>펜타포트 음악축제 신인상</p>
+                    <div class="long_line"></div>
+                    <p>
+                        인천을 대표하는 '인천 펜타포트음악축제'
+                        7월 2일부터 8월 14일까지 진행됨. 신포동 라이브클럽을 중심으로 펼쳐지는
+                        '라이브 클럽파티'를 시작으로 신인발굴 프로젝트인 '그레이트루키결승전, 찾아가는 라이브스테이지 '라이브 딜리버리'와
+                        2016년 11회를 맞고 있는 '펜타포트 락 페스티벌'이 8월 12일부터 14일 송도 달빛축제공원에서 개최됨.
+                    </p>
+                    <div class="long_line"></div>
+                    <div><a href="https://blog.naver.com/iccvc/220753137012" target="_blank">
+                        Read On</a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_top">
+                    <img src="sesoneon_img/2018 한국대중음악상_신인상.jpg"/>
+                    <div>2018 한국대중음악상</div>
+                </div>
+                <div class="card_in">
+                    <h2>2018 한국대중음악상 올해의 신인상 수상</h2>
+                    <p>한국대중음악상 신인상</p>
+                    <div class="long_line"></div>
+                    <p>
+                        리드미컬한 영역을 채워주는 멤버들의 역량, 빈티지와 로파이한 분위기를 매끈하게 구현한 사운드 등은 젊은 신진의 등장을 갈구하던 이들에겐 시의적절한 보상이었다. 
+                        ‘긴 꿈‘과 ‘파도’처럼 선행 발매된 싱글들은 기대감을 달구기에 충분했고, 전모를 드러낸 음반은 사이키델릭, 블루스록, 신스팝 등 
+                        다양한 세대 초월의 성향으로 많은 관객을 공연으로 유인하였다. 정형화되지 않은 역동적인 이들의 일면들은 음반 안에 국한되지 않는 바깥의 지지도를 현재 증명하고 있다. 
+                        그만큼 한 해 가장 많이 이야기된 밴드의 음반으로써 후보 목록에 올라올 수 있었다.
+                    </p>
+                    <div class="long_line"></div>
+                    <div><a href="http://koreanmusicawards.com/2018/winner/winner_total/" target="_blank">
+                        Read On</a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_top">
+                    <img src="sesoneon_img/2018 한국대중음악상.jpg"/>
+                    <div>2018 한국대중음악상</div>
+                </div>
+                <div class="card_in">
+                    <h2>2018 한국대중음악상 최우수 록 노래 수상</h2>
+                    <p>한국대중음악상 최우수 록 노래</p>
+                    <div class="long_line"></div>
+                    <p>
+                        2017년, 좋은 록 노래는 많았다. 하지만 이토록 세련된 방식으로 과거 클래식 록의 
+                        사료를 해석해낸 록 노래는 드물었다. 터져 나오는 드럼과 함소윤의 쫄깃한 기타는 
+                        이들이 블루스 록과 사이키델릭을 주무르고 있음을 각인시킨다. 
+                        묵직한 발걸음을 사뿐히 지르밟는다.  
+                        그 시절의 음악을 닮고자 하는 강박은 없다. 그저 자유롭게 움직일 뿐이다. 
+                        지향점을 하나로 정하지 않았다는 것은 이들이 가진 가장 큰 무기이다. 
+                        즉흥 연주처럼 뜨겁게 휘몰아치는 후주에 이들이 지향하는 모든 것이 들어 있다.
+                    </p>
+                    <div class="long_line"></div>
+                    <div><a href="http://koreanmusicawards.com/2018/portfolio_page/%EC%83%88%EC%86%8C%EB%85%84-%EC%97%AC%EB%A6%84%EA%B9%83/" target="_blank">
+                        Read On</a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_top">
+                    <img src="sesoneon_img/2020 노미네이트.jpg"/>
+                    <div>2020 한국대중음악상</div>
+                </div>
+                <div class="card_in">
+                    <h2>2020 한국대중음악상 최우수 록 노래 노미네이트</h2>
+                    <p>한국대중음악상 최우수 록 노래</p>
+                    <div class="long_line"></div>
+                    <p>
+                        한 번 들으면 쉽게 잊히지 않는 황소윤의 목소리 음색과 그가 주조한 빈티지한 
+                        기타 톤은 이제 새소년을 넘어 인디 신의 트레이드마크가 되었다. 
+                        그 트레이드마크를 다시금 대중에게 각인시킨 이 곡은 길들여짐과 불확실함의 정서가 
+                        교차한, ‘새소년다운’ 흥미로운 흔적이다. 
+                        그리고 무엇보다 2017년의 화제작 [여름깃]이 한낱 요행이 아니었음을 ‘증명하고도 남는’ 수작이다.
+                    </p>
+                    <div class="long_line"></div>
+                    <div><a href="http://koreanmusicawards.com/2020/nominees/nominees_genre/genre-02/" target="_blank">
+                        Read On</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <section>
+                <div class="clearfix">
+                    <h3 id="interview">INTERVIEW</h3>
+                    <P>
+                        새소년 인터뷰 모음
+                    </P>
+                    <div class="content_part">
+                        <img src="sesoneon_img/interview23.jpg" />
+                        <dl>
+                            <dt>새소년 황소윤 인터뷰 | "요즘은 어떻게 하면 친구들이 잘 살 수 있을까. 그게 고민인 거 같아요"</dt>
+                            <dd>
+                                허투루 문장을 만들려고 하지는 않아요. 쉽게 단어를 
+                                선택하거나 하지 않고요. 최대한 진실성 있게 
+                                한 문장 한 문장을 쓰려고 노력해요.최대한 보이지 않는 
+                                것을 언어화시키는 작업에 집중하려고 노력해왔던 것 같아요. 
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="content_part">
+                        <img src="sesoneon_img/interview422.png" />
+                        <dl>
+                            <dt>'난춘 亂春'의 시대에 만나는 가장 진실한 목소리, 새소년</dt>
+                            <dd>
+                                2020년의 난춘은 이제 나 스스로의 보살핌보다는 
+                                함께 부를 수 있는, 함께 들을 수 있는 노래였으면 좋겠다.
+                                더 많은 사람들이 이 곡에 담긴 따뜻한 메시지를 
+                                가슴속에 품어주었으면 한다
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <li><br /><a href="https://m.post.naver.com/viewer/postView.nhn?volumeNo=28401318&memberNo=24703168" target="_blank">
+                    더보기</a></li>    
+
+                <br/>
+                    <h3>VISITOR</h3>
+                <div class="clearfix">
+                <br/>
+                    <form class="form">
+                        <label for="text_1">ID</label>
+                        <input name="text_1" placeholder="새소년" type="text" value="새소년" /> 
+                        <input type="password" />
+                        <br/>
+                        <p>방명록을 입력해주세요^-^</p>
+                        <textarea rows="6" cols="40">와! 종강이다!</textarea>
+                        <input type="button" value="전송" onclick="alert('전송 되었습니다.')" /> 
+                    </form>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="short_line"></div>
+            <ul class="clearfix">
+                <li><img src="layout3_img/layout3_icon1.png"/></li>
+                <li><img src="layout3_img/layout3_icon2.png"/></li>
+                <li><img src="layout3_img/layout3_icon3.png"/></li>
+            </ul>
+            <div class="short_line"></div>
+            <p>2020.Contents Programing. prof.cho gun hee</p>
+            <p>©Copyright 2020.CHOI YUN JEONG</p>
+        </footer>
+    </div>
+
+
+
+    </body>
+</html>
